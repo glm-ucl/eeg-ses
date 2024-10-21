@@ -9,7 +9,7 @@ To install dependencies, run:
 ## Stimuli generation
 [sesstim.py](sesstim.py) reads a single video input file, multiple audio input files, and renders an output video file for each audio input file. An output video file has the corresponding audio file embedded in the left channel of the audio track. The right channel of the audio track contains metadata, beginning with a unique stimuli identifier byte and followed by timestamp bytes at 1 second intervals. Byte values < 128 represent timestamps, in seconds, whereas byte values >= 128 are identifier encodings.
 
-The video input file must be mp4 format. Audio input files must be monophonic, wav format, reside in a single directory, and have filenames of the format Story\__s_\_Part\__p_\__c_.wav, where $s\in[1, 10], p\in[1, 4], c\in\{typical, 1channel, 4channel\}$. Output video files are mp4 format with filenames story-_s_\_part-_p_\__c_.mp4.
+The video input file must be mp4 format. Audio input files must be monophonic, wav format, reside in a single directory, and have filenames of the format `Story_s_Part_p_c.wav` where $s\in[1, 10]$, $p\in[1, 4]$, $c\in\${'typical', '1channel', '4channel'}. Output video files are mp4 format with filenames `story-s_part-p_c.mp4`.
 
 Example usage:
 
